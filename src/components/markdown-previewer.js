@@ -60,10 +60,7 @@ class MarkdownPreviewer extends Component {
       output: marked(placeholder)
      }
   }
-
-  componentDidMount() {
-
-  }
+  
   convertToMarkdown = (e) => {
     let { value } = e.target
     this.setState({
@@ -71,19 +68,12 @@ class MarkdownPreviewer extends Component {
       output: marked(value)
     })
   }
-  getMarkdownText = () => {
-    return { __html: this.state.output }
-  }
-
-
-
 
   render() {
     return (
     <div>
       <textarea id="editor" value={this.state.input} onChange={this.convertToMarkdown}/>
-      <div id="preview" dangerouslySetInnerHTML={this.getMarkdownText()}>
-        {}
+      <div id="preview" dangerouslySetInnerHTML={{ __html: this.state.output }}>
       </div>
     </div> );
   }
