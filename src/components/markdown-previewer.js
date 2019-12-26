@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import marked from 'marked';
 import '../styles/markdown.css'
 
+marked.setOptions({
+  breaks: true
+});
 const placeholder =
 `# Welcome to my React Markdown Previewer!
 
@@ -80,6 +83,7 @@ class MarkdownPreviewer extends Component {
     <div>
       <textarea id="editor" value={this.state.input} onChange={this.convertToMarkdown}/>
       <div id="preview" dangerouslySetInnerHTML={this.getMarkdownText()}>
+        {}
       </div>
     </div> );
   }
