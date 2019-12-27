@@ -22,3 +22,11 @@ textarea {
   font-size: 1.25em;
   font-family: monospace;
 }
+
+@media (hover: none) {
+
+  #preview{
+    font-size: .95em;
+    font-family: monospace;
+  }
+}
