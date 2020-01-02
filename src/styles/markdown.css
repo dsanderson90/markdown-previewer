@@ -28,5 +28,18 @@ textarea {
   #preview{
     font-size: .95em;
     font-family: monospace;
+    width: 75%;
+    margin: 0 2%;
+  }
+
+  textarea {
+    margin: 10% 1%;
+    font-size: 1.5em;
+    text-align: center;
+    color: palevioletred;
+    border: 2px solid papayawhip;
+    width: 75%;
+    height: 250px;
+    font-family: monospace;
   }
 }
